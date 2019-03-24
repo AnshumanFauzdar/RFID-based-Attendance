@@ -7,3 +7,7 @@ Like swapping metro card for travelling this can be a secured way of attendance 
 # Material Required
 
 1. RFID Reader/Writer [RC522]
+2. RFID cards
+3. Wemos D1 R2
+4. Jumper wires
+5. 
