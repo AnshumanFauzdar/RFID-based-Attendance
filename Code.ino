@@ -8,6 +8,7 @@
 
 // RFID READER
 
+#include "AdafruitIO_WiFi.h"
 #include <SPI.h>
 #include <MFRC522.h>
 
@@ -31,11 +32,18 @@ MFRC522 mfrc522(SS_PIN, RST_PIN);
 
 #include "AdafruitIO_WiFi.h"
 AdafruitIO_WiFi io(IO_USERNAME, IO_KEY, WIFI_SSID, WIFI_PASS);
-
+AdafruitIO_Feed *temperatureFeed = io.feed("Attendance");
 
 void setup() 
 {
-  Serial.begin(9600);                                           
+  Serial.begin(9600); 
+  io.connect();
+  while(io.status() < AIO_CONNECTED) 
+  {
+    Serial.print(".");
+    delay(500);
+  }
+                                          
   SPI.begin();                                                  
   mfrc522.PCD_Init();                                              
   Serial.println(F("Read data from card:"));    
@@ -43,7 +51,7 @@ void setup()
 
 void loop() 
 {
-
+  
 //-------------------READING VALUE FROM CARD------------------------
   
   // Prepare key - all keys are set to FFFFFFFFFFFFh at chip delivery from the factory.
@@ -142,5 +150,11 @@ void loop()
 
   mfrc522.PICC_HaltA();
   mfrc522.PCD_StopCrypto1();
+
+   io.run();
+   temperatureFeed->save("Anshuman");
+   Serial.print("Data Sent");
+   delay(5000);
+
 
 }
