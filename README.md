@@ -10,4 +10,11 @@ Like swapping metro card for travelling this can be a secured way of attendance 
 2. RFID cards
 3. Wemos D1 R2
 4. Jumper wires
-5. 
+5. Breadboard
+6. Tools + Equipments
+
+# Using adafruit IO
+
+Using adafruit MQTT to push data of RFID to IO server is easy and fast!
+
+
