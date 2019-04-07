@@ -32,7 +32,7 @@ MFRC522 mfrc522(SS_PIN, RST_PIN);
 
 #include "AdafruitIO_WiFi.h"
 AdafruitIO_WiFi io(IO_USERNAME, IO_KEY, WIFI_SSID, WIFI_PASS);
-AdafruitIO_Feed *temperatureFeed = io.feed("Attendance");
+AdafruitIO_Feed *attendanceFeed = io.feed("Attendance");
 
 void setup() 
 {
@@ -152,7 +152,7 @@ void loop()
   mfrc522.PCD_StopCrypto1();
 
    io.run();
-   temperatureFeed->save("Anshuman");
+   attendanceFeed->save("Anshuman");
    Serial.print("Data Sent");
    delay(5000);
 
