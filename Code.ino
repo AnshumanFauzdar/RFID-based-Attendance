@@ -22,13 +22,13 @@ MFRC522 mfrc522(SS_PIN, RST_PIN);
 #include "Adafruit_MQTT_Client.h"
 
 /************************* WiFi Access Point *********************************/
-#define WIFI_SSID       "Sudeep Singh"
-#define WIFI_PASS       "9785192270"
+#define WIFI_SSID       "Your SSID"
+#define WIFI_PASS       "Password"
 
 /************************* Adafruit.io Setup *********************************/
 
-#define IO_USERNAME    "AnshumanFauzdar"
-#define IO_KEY         "5603bbb3535746bbb83d995de782102a"
+#define IO_USERNAME    "Your username"
+#define IO_KEY         "Unique key"
 
 #include "AdafruitIO_WiFi.h"
 AdafruitIO_WiFi io(IO_USERNAME, IO_KEY, WIFI_SSID, WIFI_PASS);
