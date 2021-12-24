@@ -15,6 +15,12 @@ Like swapping metro card for travelling this can be a secured way of attendance 
 
 # Using adafruit IO
 
-Using adafruit MQTT to push data of RFID to IO server is easy and fast!
+Using adafruit MQTT to push data of RFID to Adafruit IO server is easy and fast!
 
+# Use project
 
+-> `Code.ino` : Contains main code
+
+-> `Write_code.ino` : Contains writing content to RFID cards
+
+![Hardware](https://user-images.githubusercontent.com/40523329/147317374-ba4a15a9-abb8-45d6-94b6-39d67fbac4b5.jpg)
